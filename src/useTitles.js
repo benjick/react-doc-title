@@ -21,7 +21,6 @@ const useTitles = ({
   function register(object) {
     const _titles = titles.slice()
     object.id = object.id ? object.id : uniqid()
-    console.log(titles, object)
     _titles.push(object)
     setTitles(_titles)
     return () => {
