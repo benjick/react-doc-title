@@ -20,7 +20,7 @@ afterEach(() => {
   container = null
 })
 
-it.only('can change title', () => {
+it('can change title', () => {
   act(() => {
     ReactDOM.render(
       <Provider title='react-title'>
