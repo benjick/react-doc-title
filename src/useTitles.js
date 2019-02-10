@@ -11,35 +11,31 @@ const useTitles = ({
   title = '', divider = ' - ', append = false
 }) => {
   const [titles, setTitles] = useState([])
-  let _titles = [{string: title}, ...titles]
-  if (!append) {
-    _titles.reverse()
-  }
+
   useEffect(() => {
     const oldTitle = document.title
     return () => {
       document.title = oldTitle
     }
   }, [])
+
   useEffect(() => {
-    const newTitle = joinTitles(_titles, divider)
-    document.title = newTitle
-  }, [titles])
-  function unregister(id) {
-    const index = titles.findIndex(item => item.id === id)
-    if (index > -1) {
-      titles.splice(index, 1)
-      setTitles(titles)
+    let allTitles = [{string: title}, ...titles]
+    if (!append) {
+      allTitles.reverse()
     }
-  }
+    document.title = joinTitles(allTitles, divider)
+  }, [titles, divider])
+
   function register(object) {
     object.id = object.id ? object.id : uniqid()
-    setTitles(_titles => [..._titles, object])
-    return () => {
-      unregister(object.id)
+    setTitles(state => [...state, object])
+    return function unregister() {
+      const id = object.id
+      setTitles(state => state.filter(item => item.id !== id))
     }
   }
-  return { register }
+  return { register, titles }
 }
 
 const {Provider, Context} = createContainer(useTitles)
