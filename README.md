@@ -1,18 +1,18 @@
-# react-title
+# react-doc-title
 
-[![NPM](https://img.shields.io/npm/v/@benjick/react-title.svg)](https://www.npmjs.com/package/@benjick/react-title) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/benjick/react-title.svg?branch=master)](https://travis-ci.org/benjick/react-title)
+[![NPM](https://img.shields.io/npm/v/react-doc-title.svg)](https://www.npmjs.com/package/@benjick/react-title) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/benjick/react-title.svg?branch=master)](https://travis-ci.org/benjick/react-title)
 
 ## Install
 
 ```bash
-yarn add @benjick/react-title
+yarn add react-doc-title
 ```
 
 ## Usage
 
 ```js
 import React from 'react'
-import {Provider, Title, useTitle} from '@benjick/react-title'
+import {Provider, Title, useTitle} from 'react-doc-title'
 
 function MyComponent() {
   useTitle('Contact')
