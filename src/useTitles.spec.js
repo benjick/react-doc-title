@@ -51,6 +51,22 @@ function TestComponent() {
   )
 }
 
+function TestNestingComponent() {
+  const [show, toggleShow] = useBoolean(false)
+
+  return (
+    <Provider title='react-doc-title'>
+      <Title string='test' />
+      <Title string='test2' />
+      <button id='toggle' type='button' onClick={toggleShow}>Toggle</button>
+      {show &&
+        <Provider title='bar'>
+          <Title string='test' />
+        </Provider>}
+    </Provider>
+  )
+}
+
 it('can change title', () => {
   act(() => {
     ReactDOM.render(
@@ -81,4 +97,30 @@ it('can use other settings', () => {
       , container)
   })
   expect(document.title).toBe('react-doc-title > test')
+})
+
+it('can fall back to orginal title as base', () => {
+  act(() => {
+    ReactDOM.render(
+      <Provider>
+        <Title string='' />
+        <Title string='test' />
+      </Provider>
+      , container)
+  })
+  expect(document.title).toBe('test - Hooks are cool')
+})
+
+it('can handle nesting of Providers', () => {
+  act(() => {
+    ReactDOM.render(
+      <TestNestingComponent />
+      , container)
+  })
+  const toggle = container.querySelector('button#toggle')
+  expect(document.title).toBe('test2 - test - react-doc-title')
+  act(() => {
+    toggle.dispatchEvent(new MouseEvent('click', {bubbles: true}))
+  })
+  expect(document.title).toBe('test - bar')
 })

@@ -8,7 +8,7 @@ const joinTitles = (titles, divider) => titles
   .join(divider)
 
 const useTitles = ({
-  title = '', divider = ' - ', append = false
+  title = document.title, divider = ' - ', append = false
 }) => {
   const [titles, setTitles] = useState([])
 
