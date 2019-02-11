@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import {Provider, Title, useTitle} from './'
 
+const click = new MouseEvent('click', {bubbles: true})
+
 function useBoolean(initialValue) {
   if (typeof initialValue !== 'boolean') {
     throw new TypeError('I need a boolean')
@@ -73,7 +75,6 @@ it('can change title', () => {
       <TestComponent />
       , container)
   })
-  const click = new MouseEvent('click', {bubbles: true})
   const toggle = container.querySelector('button#toggle')
   const toggleP = container.querySelector('button#provider')
   expect(document.title).toBe('test3 - test2 - test - react-doc-title')
@@ -117,8 +118,8 @@ it('can handle nesting of Providers', () => {
   })
   const toggle = container.querySelector('button#toggle')
   expect(document.title).toBe('test2 - test - react-doc-title')
-  act(() => {
-    toggle.dispatchEvent(new MouseEvent('click', {bubbles: true}))
-  })
+  act(() => { toggle.dispatchEvent(click) })
   expect(document.title).toBe('test - bar')
+  act(() => { toggle.dispatchEvent(click) })
+  expect(document.title).toBe('test2 - test - react-doc-title')
 })
