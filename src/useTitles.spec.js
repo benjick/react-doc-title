@@ -40,7 +40,7 @@ function TestComponent() {
 
   return (
     <div>
-      <Provider title='react-title'>
+      <Provider title='react-doc-title'>
         <Title string='test' />
         <Title string='test2' />
         <button id='toggle' type='button' onClick={toggleShow}>Toggle</button>
@@ -60,11 +60,11 @@ it('can change title', () => {
 
   const toggle = container.querySelector('button#toggle')
   const toggleP = container.querySelector('button#provider')
-  expect(document.title).toBe('test3 - test2 - test - react-title')
+  expect(document.title).toBe('test3 - test2 - test - react-doc-title')
   act(() => {
     toggle.dispatchEvent(new MouseEvent('click', {bubbles: true}))
   })
-  expect(document.title).toBe('test2 - test - react-title')
+  expect(document.title).toBe('test2 - test - react-doc-title')
   act(() => {
     toggleP.dispatchEvent(new MouseEvent('click', {bubbles: true}))
   })
@@ -74,11 +74,11 @@ it('can change title', () => {
 it('can use other settings', () => {
   act(() => {
     ReactDOM.render(
-      <Provider title='react-title' append divider=' > '>
+      <Provider title='react-doc-title' append divider=' > '>
         <Title string='' />
         <Title string='test' />
       </Provider>
       , container)
   })
-  expect(document.title).toBe('react-title > test')
+  expect(document.title).toBe('react-doc-title > test')
 })

@@ -4,7 +4,7 @@
   "description": "",
   "author": "benjick",
   "license": "MIT",
-  "repository": "benjick/react-title",
+  "repository": "benjick/react-doc-title",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
