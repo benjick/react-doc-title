@@ -71,10 +71,11 @@ it('can change title', () => {
   expect(document.title).toBe('Hooks are cool')
 })
 
-it('can change title', () => {
+it('can use other settings', () => {
   act(() => {
     ReactDOM.render(
       <Provider title='react-title' append divider=' > '>
+        <Title string='' />
         <Title string='test' />
       </Provider>
       , container)
