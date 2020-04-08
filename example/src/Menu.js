@@ -14,7 +14,7 @@ function Menu() {
         <LinkContainer to="/react-doc-title/reactive">
           <Nav.Link>Reactive</Nav.Link>
         </LinkContainer>
-        <NavDropdown title="About" id="basic-nav-dropdown">
+        <NavDropdown title="About">
           <LinkContainer exact to="/react-doc-title/about">
             <NavDropdown.Item>About us</NavDropdown.Item>
           </LinkContainer>
