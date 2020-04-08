@@ -4,7 +4,7 @@ import {Provider, Context} from './useTitles'
 
 export function useTitle(string) {
   const context = useContext(Context)
-  useEffect(() => context.register({string}), [])
+  useEffect(() => context.register({string}), [string])
 }
 
 export function Title({string}) {
