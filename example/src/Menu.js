@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 function Menu() {
   return (
@@ -8,10 +8,20 @@ function Menu() {
       <Navbar.Brand href="/react-doc-title/">react-doc-title</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Link to="/react-doc-title/">Home</Link>
-        -<Link to="/react-doc-title/about">About</Link>
-        -<Link to="/react-doc-title/about/contact">Contact</Link>
-        -<Link to="/react-doc-title/reactive">Reactive</Link>
+        <LinkContainer to="/react-doc-title">
+          <Nav.Link>Home</Nav.Link>
+        </LinkContainer>
+        <LinkContainer to="/react-doc-title/reactive">
+          <Nav.Link>Reactive</Nav.Link>
+        </LinkContainer>
+        <NavDropdown title="About" id="basic-nav-dropdown">
+          <LinkContainer exact to="/react-doc-title/about">
+            <NavDropdown.Item>About us</NavDropdown.Item>
+          </LinkContainer>
+          <LinkContainer exact to="/react-doc-title/about/contact">
+            <NavDropdown.Item>Contact</NavDropdown.Item>
+          </LinkContainer>
+        </NavDropdown>
       </Navbar.Collapse>
     </Navbar>
   );
