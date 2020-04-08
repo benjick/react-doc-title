@@ -44,7 +44,7 @@ function TestComponent() {
     <div>
       <Provider title='react-doc-title'>
         <Title string='test' />
-        <Title string='test2' />
+        <Title string={show ? 'test2-show' : 'test2'} />
         <button id='toggle' type='button' onClick={toggleShow}>Toggle</button>
         <button id='provider' type='button' onClick={toggleProvider}>Toggle</button>
         {show && <MyComponent />}
@@ -77,11 +77,11 @@ it('can change title', () => {
   })
   const toggle = container.querySelector('button#toggle')
   const toggleP = container.querySelector('button#provider')
-  expect(document.title).toBe('test3 - test2 - test - react-doc-title')
+  expect(document.title).toBe('test3 - test2-show - test - react-doc-title')
   act(() => { toggle.dispatchEvent(click) })
   expect(document.title).toBe('test2 - test - react-doc-title')
   act(() => { toggle.dispatchEvent(click) })
-  expect(document.title).toBe('test3 - test2 - test - react-doc-title')
+  expect(document.title).toBe('test3 - test2-show - test - react-doc-title')
   act(() => { toggleP.dispatchEvent(click) })
   expect(document.title).toBe('Hooks are cool')
 })
