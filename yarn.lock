@@ -3136,10 +3136,10 @@ constants-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
-constate@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/constate/-/constate-1.0.0.tgz#93fa87108e364a05e93b3597e22d53adaf86776d"
-  integrity sha512-b1Pip712fAQ1el4pndiYeVMXAzlbrD8+Z8ik79TOQc3ZJNjxKGawT0gCPpANsNbT4eHszDZ/8472hvL1rowUhQ==
+constate@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/constate/-/constate-2.0.0.tgz#ba9bf91217c306292c1f8a7e45e0ff5a76c38a55"
+  integrity sha512-oYpbnxDH1BSZTyBHGpSabuT0h/rLU7UDTC8p8J/TLt8G69ePIHCaNyDCz+LUl1QJpCrzrk0jO4D524rJlh4edg==
 
 contains-path@^0.1.0:
   version "0.1.0"
@@ -10888,10 +10888,10 @@ uniq@^1.0.1:
   resolved "https://registry.yarnpkg.com/uniq/-/uniq-1.0.1.tgz#b31c5ae8254844a3a8281541ce2b04b865a734ff"
   integrity sha1-sxxa6CVIRKOoKBVBzisEuGWnNP8=
 
-uniqid@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/uniqid/-/uniqid-5.0.3.tgz#917968310edc868d50df6c44f783f32c7d80fac1"
-  integrity sha512-R2qx3X/LYWSdGRaluio4dYrPXAJACTqyUjuyXHoJLBUOIfmMcnYOyY2d6Y4clZcIz5lK6ZaI0Zzmm0cPfsIqzQ==
+uniqid@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/uniqid/-/uniqid-5.2.0.tgz#0d0589a7e9ce07116848126764fbff0b68e74329"
+  integrity sha512-LH8zsvwJ/GL6YtNfSOmMCrI9piraAUjBfw2MCvleNE6a4pVKJwXjG2+HWhkVeFcSg+nmaPKbMrMOoxwQluZ1Mg==
 
 uniqs@^2.0.0:
   version "2.0.0"
