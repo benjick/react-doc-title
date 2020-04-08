@@ -10,4 +10,9 @@ jobs:
         with:
           node-version: 10
       - run: yarn install
+      - name: Run linters
+        uses: samuelmeuli/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          eslint: true
       - run: yarn test
