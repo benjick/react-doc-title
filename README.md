@@ -1,6 +1,6 @@
 # react-doc-title
 
-[![NPM](https://img.shields.io/npm/v/react-doc-title.svg)](https://www.npmjs.com/package/@benjick/react-doc-title) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/benjick/react-doc-title.svg?branch=master)](https://travis-ci.org/benjick/react-doc-title)
+[![NPM](https://img.shields.io/npm/v/react-doc-title.svg)](https://www.npmjs.com/package/@benjick/react-doc-title) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![Build status](https://github.com/kodbruket/vsf-payment-klarna/workflows/Tests/badge.svg)
 
 ## Install
 
