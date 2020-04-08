@@ -8,8 +8,10 @@ function Menu() {
       <Navbar.Brand href="/react-doc-title/">react-doc-title</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Link to="/react-doc-title/">Home</Link> -<Link to="/react-doc-title/about">About</Link> -
-        <Link to="/react-doc-title/about/contact">Contact</Link>
+        <Link to="/react-doc-title/">Home</Link>
+        -<Link to="/react-doc-title/about">About</Link>
+        -<Link to="/react-doc-title/about/contact">Contact</Link>
+        -<Link to="/react-doc-title/reactive">Reactive</Link>
       </Navbar.Collapse>
     </Navbar>
   );

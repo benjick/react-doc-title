@@ -4,6 +4,7 @@ import { Provider, Title, useTitle } from "react-doc-title";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Menu from "./Menu";
 import Home from "./Home";
+import Reactive from "./Reactive";
 import PreviewTitle from "./PreviewTitle";
 
 function Contact() {
@@ -19,6 +20,7 @@ function App() {
       <Menu />
       <hr />
       <Route path="/react-doc-title" exact component={Home} />
+      <Route path="/react-doc-title/reactive" exact component={Reactive} />
       <Route
         path="/react-doc-title/about"
         render={() => (
