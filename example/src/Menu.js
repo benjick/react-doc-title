@@ -1,6 +1,6 @@
-import React from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import React from 'react'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 function Menu() {
   return (
@@ -24,7 +24,7 @@ function Menu() {
         </NavDropdown>
       </Navbar.Collapse>
     </Navbar>
-  );
+  )
 }
 
-export default Menu;
+export default Menu

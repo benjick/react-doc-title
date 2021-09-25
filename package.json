@@ -58,7 +58,7 @@
     "dist"
   ],
   "dependencies": {
-    "constate": "^2.0.0",
-    "uniqid": "^5.2.0"
+    "constate": "^3.3.0",
+    "uniqid": "^5.4.0"
   }
 }

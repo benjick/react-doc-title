@@ -1,6 +1,6 @@
-import React from "react";
-import { Jumbotron } from "react-bootstrap";
-import { useTitle } from "react-doc-title";
+import React from 'react'
+import { Jumbotron } from 'react-bootstrap'
+import { useTitle } from 'react-doc-title'
 
 function Reactive() {
   const [title, setTitle] = React.useState('reactive')
@@ -8,9 +8,14 @@ function Reactive() {
   return (
     <Jumbotron>
       <h1>Reactive titles</h1>
-      Change this: <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
+      Change this:
+      <input
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
     </Jumbotron>
-  );
+  )
 }
 
-export default Reactive;
+export default Reactive

@@ -1,12 +1,12 @@
-import React from "react";
-import { Jumbotron, Button } from "react-bootstrap";
+import React from 'react'
+import { Jumbotron, Button } from 'react-bootstrap'
 
 function Home() {
   return (
     <Jumbotron>
       <h1>Hello, world!</h1>
       <p>
-        This is a quick demo showing how to use this package. Check{" "}
+        This is a quick demo showing how to use this package. See
         <code>index.js</code> to see full usage
       </p>
       <p>
@@ -17,7 +17,7 @@ function Home() {
         </Button>
       </p>
     </Jumbotron>
-  );
+  )
 }
 
-export default Home;
+export default Home
